@@ -51,11 +51,13 @@ $(document).ready(function(e){
 //          
 //        }
 });
-$(document).scroll(function() {
-  var y = $(this).scrollTop();
-  if (y > 800) {
-    $('#arrow-up').fadeIn();
-  } else {
-    $('#arrow-up').fadeOut();
-  }
-});
+
+
+// $(document).scroll(function() {
+//   var y = $(this).scrollTop();
+//   if (y > 800) {
+//     $('#arrow-up').fadeIn();
+//   } else {
+//     $('#arrow-up').fadeOut();
+//   }
+// });

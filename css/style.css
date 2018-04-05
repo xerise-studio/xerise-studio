@@ -14,7 +14,7 @@ a:hover{
   color: #666;
 }
 .dark a:hover{
-  color: #e3e3e3;
+  color: rgba(255,255,255,.9);
 }
 
 #arrow-up{
@@ -61,7 +61,7 @@ a:hover{
 
 /*header-----------------------------------------*/
 .dark{
-  color: #e3e3e3;
+  color: rgba(255,255,255,.9);
   background:
     linear-gradient(to bottom, #100516CC, #1005164b 50%),
     url(../img/bg.png)  center;
@@ -87,7 +87,7 @@ a:hover{
   transition: all .3s;
 }
 .dark .button:hover{
-  color: #e3e3e3;
+  color: rgba(255,255,255,.9);
 }
 #header .container{
   height: 100%;
@@ -129,13 +129,13 @@ nav li{
 }
 nav .active a{
     font-weight: bold;
-    color: #e3e3e3;
+    color: rgba(255,255,255,.9);
 }
 nav .active{
     border-bottom: solid 3px rgb(175, 131, 172);
 }
 nav a:hover{
-  color: #e3e3e3;
+  color: rgba(255,255,255,.9);
 }
 nav #nav-ar{
   float: right;
@@ -177,7 +177,7 @@ nav #nav-ar{
   
 }
 .four img, .three img, .two img{
-  width: 100%;
+  max-width: 100%;
 }
 .about .profile img{
   -webkit-filter: saturate(0)  contrast(.6) brightness(1.3);
@@ -293,7 +293,7 @@ textarea{
 #copyright{
   padding: 30px 0 50px;
   background: #1a161d;
-  color: #e3e3e3;
+  color: rgba(255,255,255,.9);
   /* border-top: #666 solid 2px; */
 }
 /*Animations----------------------------------------*/
@@ -355,6 +355,16 @@ textarea{
 
 ::-ms-input-placeholder { /* Microsoft Edge */
   color: rgba(255,255,255,.3);
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: #100516CC;
+}
+
+::selection {
+  color: white; 
+  background: #100516CC;
 }
 
 
