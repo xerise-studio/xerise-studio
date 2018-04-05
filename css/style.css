@@ -4,7 +4,7 @@
 }
 a{
   text-decoration: none;
-  color: #888;
+  color: rgb(175, 131, 172);
   -webkit-transition: color .5s;
   -o-transition: color .5s;
   transition: color .5s;
@@ -38,7 +38,7 @@ a:hover{
 #header{
   background:
       url(../img/bg-2.svg) no-repeat bottom,
-      linear-gradient(to bottom, #100516, rgba(51, 51, 51, 0.43)),
+      linear-gradient(to bottom, #100516CC, #1005164b),
       url(../img/bg.png) repeat bottom;
   height: 100vh;
   min-height: 500px;
@@ -63,7 +63,7 @@ a:hover{
 .dark{
   color: #e3e3e3;
   background:
-    linear-gradient(to bottom, #100516, rgba(51, 51, 51, 0.43) 50%),
+    linear-gradient(to bottom, #100516CC, #1005164b 50%),
     url(../img/bg.png)  center;
   position: relative;
 }
@@ -81,7 +81,7 @@ a:hover{
   display: block;
   margin: auto;
   width: 200px;
-  color: #888;
+  color: rgba(255,255,255,.7);
   -webkit-transition: all .3s;
   -o-transition: all .3s;
   transition: all .3s;
@@ -114,7 +114,7 @@ nav img{
     height: 60px;
 }
 nav a{
-    color: #888;
+    color: rgb(175, 131, 172);
     text-decoration: none;
 }
 nav ul{
@@ -132,7 +132,7 @@ nav .active a{
     color: #e3e3e3;
 }
 nav .active{
-    border-bottom: solid 3px #888;
+    border-bottom: solid 3px rgb(175, 131, 172);
 }
 nav a:hover{
   color: #e3e3e3;
@@ -164,10 +164,10 @@ nav #nav-ar{
   margin: 30px auto;
   background: #e3e3e3;
 }
-.four h4{
+.profile h4{
   margin: 30px 0 20px 0;
 }
-.four h4:after{
+.profile h4:after{
   content: '';
   background: #e3e3e3;
   display: block;
@@ -179,6 +179,18 @@ nav #nav-ar{
 .four img, .three img, .two img{
   width: 100%;
 }
+.about .profile img{
+  -webkit-filter: saturate(0)  contrast(.6) brightness(1.3);
+  -o-filter: saturate(0)  contrast(.6) brightness(1.3);
+  filter: saturate(0)  contrast(.6) brightness(1.3);
+  transition: all .5s;
+  width: 150px;
+}
+.profile:hover img{
+  -webkit-filter:  saturate(1);
+  -o-filter:  saturate(1);
+  filter:  saturate(1);
+}  
 /*About------------------------------------------*/
 
 .about{
@@ -190,18 +202,6 @@ nav #nav-ar{
 .about *{
   text-align: center;
 }
-.about .four img{
-  -webkit-filter: saturate(0)  contrast(.6) brightness(1.3);
-  -o-filter: saturate(0)  contrast(.6) brightness(1.3);
-  filter: saturate(0)  contrast(.6) brightness(1.3);
-  transition: all .5s;
-  width: 150px;
-}
-.four:hover img{
-  -webkit-filter:  saturate(1);
-  -o-filter:  saturate(1);
-  filter:  saturate(1);
-}  
 
 /*games------------------------------------------*/
 .gamei img{
@@ -210,9 +210,9 @@ nav #nav-ar{
 }
 
 #games{
-  background: 
+  /* background: 
     linear-gradient(to bottom, #fff, rgba(255, 255, 255, 0.67)),
-    url(../img/bg-bw.png);
+    url(../img/bg-bw.png); */
    
 }
 
@@ -247,7 +247,7 @@ nav #nav-ar{
 }
 
 textarea{
-  resize: auto;
+  resize: none;
 }
 #contact form *{
   max-width: 400px;
@@ -261,12 +261,17 @@ textarea{
   border-radius: 20px ;
 }
 
+#contact form input:focus, #contact form textarea:focus{
+  border: 1px solid rgb(175, 131, 172);
+  box-shadow: 0 3px 5px rgba(175, 131, 172, .4);
+}
+
 /*Footer----------------------------------------------*/
 #footer{
   position: relative;
   padding: 100px 0;
   background:
-      linear-gradient(to top, #351048, rgba(51, 51, 51, 0.43)),
+  linear-gradient(to bottom, #100516CC, #1005164b),
       url(../img/bg.png) repeat bottom;
 }
 #footer:before{
@@ -277,7 +282,7 @@ textarea{
   background: url(../img/ripple.png);
   background-repeat: repeat-x;
   background-size: 100px auto;
-  background-position: center;
+  background-position: center 0px;
   position: absolute;
   top: -50px;
   
@@ -287,9 +292,9 @@ textarea{
 }
 #copyright{
   padding: 30px 0 50px;
-  background: hsl(0, 0%, 17%);
+  background: #1a161d;
   color: #e3e3e3;
-  border-top: #666 solid 2px;
+  /* border-top: #666 solid 2px; */
 }
 /*Animations----------------------------------------*/
 @keyframes mymove {
@@ -337,4 +342,27 @@ textarea{
   nav #nav-ar{
     display: block;
   }
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(255,255,255,.3);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: rgba(255,255,255,.3);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: rgba(255,255,255,.3);
+}
+
+
+/* //fixes */
+
+.button:hover, button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover, .button:focus, button:focus, input[type="submit"]:focus, input[type="reset"]:focus, input[type="button"]:focus {
+  color: white;
+  border-color: rgb(175, 131, 172);
+  outline: 0;
+  background: #100516;
 }
