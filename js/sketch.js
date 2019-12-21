@@ -23,9 +23,11 @@ function draw() {
   clear();
   strokeWeight(2);
   
-  for (let x = floor(-width/2/w) * w; x < width / 2; x += w)
-    for (let y = floor(-height/2/h) * h; y < height / 2; y+= h) {
-      stroke(255, noise(x/w, y/h, noff) * 60);
+  let startx = floor(-width/2/w) * w;
+  let starty = floor(-height/2/h) * h;
+  for (let x = startx; x < width / 2; x += w)
+    for (let y = starty; y < height / 2; y+= h) {
+      stroke(255, ((y - starty)/height) * noise(x/w, y/h, noff) * 120);
       line(x, y, x+w, y+h);        
       line(x, y+h, x+w, y);        
     }
