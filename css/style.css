@@ -38,8 +38,8 @@ a:hover{
 #header{
   background:
       url(../img/bg-2.svg) no-repeat bottom,
-      linear-gradient(to bottom, #100516CC, #1005164b),
-      url(../img/bg.png) repeat bottom;
+      linear-gradient(to bottom, #2A002D, #6C0241);
+      /* url(../img/bg.png) repeat bottom; */
   height: 100vh;
   min-height: 500px;
   position: relative;
@@ -379,4 +379,13 @@ textarea{
   border-color: rgb(175, 131, 172);
   outline: 0;
   background: #100516;
+}
+
+#canvas {
+  position: absolute;
+  overflow: hidden;
+}
+
+#canvas canvas {
+  width: 100% !important;
 }
